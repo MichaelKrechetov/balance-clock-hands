@@ -5,15 +5,17 @@
     length_short: length_short
     density: density
     thickness: thickness
-    weight: weight
-    distance: distance
+
+
 
     GridLayout:
         cols:1
         size: root.width - 100, root.height - 100
         pos: 50, 50
+        spacing: (20, 0)
 
         GridLayout:
+            spacing: (50, 20)
             cols:4
 
             Label:
@@ -21,48 +23,82 @@
 
             TextInput:
                 id: square_long
+                hint_text: "1287.6"
+
 
             Label:
                 text: "Площина короткої частини, мм"
 
             TextInput:
                 id: square_short
+                hint_text: "443.6"
 
             Label:
                 text: "Довжина довгої частини, мм"
 
             TextInput:
                 id: length_long
+                hint_text: "272.5"
 
             Label:
                 text: "Довжина короткої частини, мм"
 
             TextInput:
                 id: length_short
+                hint_text: "95"
 
             Label:
-                text: "Щільність матеріала, г\мм3"
+                text: "Щільність матеріала, г\дм3"
 
             TextInput:
                 id: density
+                hint_text: "120"
 
             Label:
                 text: "Товщина стрілки, мм"
 
             TextInput:
                 id: thickness
+                hint_text: "1.5"
+
+        GridLayout:
+            cols:2
+            spacing: (20, 0)
+
+
+            Slider:
+                id: distance
+                step: 0.5
+
 
             Label:
-                text: "Маса додаткового вантажа, г"
+                text: "Відстань від вісі "+str(distance.value)+" мм"
+                size_hint: (0.3, 1)
+
+        GridLayout:
+            cols:3
+            spacing: (20, 0)
+            size_hint: (1, 0.3)
+
+            Label:
+                text: "Маса вантажу"
+                size_hint: (0.25, 1)
 
             TextInput:
                 id: weight
+                size_hint: (0.25, 0.25)
 
-            Label:
-                text: "Відстань вантажа до вісі, мм"
+            Button:
+                text: "Збалансувати"
+                size_hint: (1, 0.5)
+                on_press: root.balance()
 
-            TextInput:
-                id: distance
+
+        Widget:
+            id: canvas
+
+
+
 
 
 
