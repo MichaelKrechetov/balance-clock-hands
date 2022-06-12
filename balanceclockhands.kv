@@ -1,0 +1,70 @@
+<MyGrid>
+    square_long: square_long
+    square_short: square_short
+    length_long: length_long
+    length_short: length_short
+    density: density
+    thickness: thickness
+    weight: weight
+    distance: distance
+
+    GridLayout:
+        cols:1
+        size: root.width - 100, root.height - 100
+        pos: 50, 50
+
+        GridLayout:
+            cols:4
+
+            Label:
+                text: "Площина довгої частини, мм"
+
+            TextInput:
+                id: square_long
+
+            Label:
+                text: "Площина короткої частини, мм"
+
+            TextInput:
+                id: square_short
+
+            Label:
+                text: "Довжина довгої частини, мм"
+
+            TextInput:
+                id: length_long
+
+            Label:
+                text: "Довжина короткої частини, мм"
+
+            TextInput:
+                id: length_short
+
+            Label:
+                text: "Щільність матеріала, г\мм3"
+
+            TextInput:
+                id: density
+
+            Label:
+                text: "Товщина стрілки, мм"
+
+            TextInput:
+                id: thickness
+
+            Label:
+                text: "Маса додаткового вантажа, г"
+
+            TextInput:
+                id: weight
+
+            Label:
+                text: "Відстань вантажа до вісі, мм"
+
+            TextInput:
+                id: distance
+
+
+
+
+
